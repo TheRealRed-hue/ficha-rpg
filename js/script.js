@@ -39,7 +39,6 @@ document.querySelectorAll('.stat-block').forEach(block => {
   });
 });
 
-
 // Runas de fundo brilhando e sumindo
 function createBgRune() {
   const rune = document.createElement('div');
@@ -57,30 +56,103 @@ function createBgRune() {
 }
 setInterval(createBgRune, 3500);
 
+// === FRASES ===
+// Frases normais
+const normalWords = [
+  "Who am I?",
+  "Why do I fight?",
+  "Lost soul",
+  "My blade remembers",
+  "Between shadows",
+  "Echoes of war"
+];
+
+// Frases psicopatas (modo Blood)
+const bloodWords = [
+  "RUN",
+  "I'M GONNA KILL YOU",
+  "YOUR BLOOD IS MINE",
+  "NO ESCAPE",
+  "DIE, DIE, DIE",
+  "THE CARRASCO IS HERE"
+];
+
+// Variável que controla qual lista usar
+let activeWords = normalWords;
 
 // Palavras flutuantes
 function createWord() {
   const word = document.createElement('div');
   word.className = 'word';
 
-  // Lista de frases
-  const words = [
-    "Who am I?",
-    "Why do I fight?",
-    "Lost soul",
-    "My blade remembers",
-    "Between shadows",
-    "Echoes of war"
-  ];
-  word.textContent = words[Math.floor(Math.random() * words.length)];
+  // pega da lista ativa
+  word.textContent = activeWords[Math.floor(Math.random() * activeWords.length)];
 
-  word.style.left = Math.random() * 80 + 'vw'; // evita sair da tela
+  word.style.left = Math.random() * 80 + 'vw';
   word.style.top = Math.random() * 80 + 'vh';
 
   document.body.appendChild(word);
 
   setTimeout(() => { word.remove(); }, 8000);
 }
-
-// Gerar palavras de tempos em tempos
 setInterval(createWord, 9000);
+
+// Runas sobre a imagem do personagem
+function createCharRune() {
+  const charContainer = document.querySelector('.Imagemchar');
+  if (!charContainer) return;
+
+  const rune = document.createElement('div');
+  rune.className = 'bg-rune';
+  const runes = ["ᚠ","ᚢ","ᚦ","ᚨ","ᛃ","✠"];
+  rune.textContent = runes[Math.floor(Math.random() * runes.length)];
+
+  rune.style.position = 'absolute';
+  rune.style.top = Math.random() * 80 + '%';
+  rune.style.left = Math.random() * 80 + '%';
+  rune.style.fontSize = '1.5rem';
+  rune.style.opacity = '0.4';
+
+  charContainer.appendChild(rune);
+
+  setTimeout(() => { rune.remove(); }, 4000);
+}
+setInterval(createCharRune, 5000);
+
+// Lista de imagens
+const images = [
+  "img/personagem.jpg",
+  "img/personagem2.jpg",
+];
+let currentImage = 0;
+
+const charImg = document.querySelector('.img-char');
+document.querySelector('.arrow.left').addEventListener('click', () => {
+  currentImage = (currentImage - 1 + images.length) % images.length;
+  charImg.src = images[currentImage];
+});
+document.querySelector('.arrow.right').addEventListener('click', () => {
+  currentImage = (currentImage + 1) % images.length;
+  charImg.src = images[currentImage];
+});
+
+// === Easter Egg: Blood Mode + Nome + Frases ===
+document.addEventListener("DOMContentLoaded", () => {
+  const charName = document.querySelector(".character-name");
+
+  if (charName) {
+    const originalName = charName.textContent;
+
+    charName.addEventListener("click", () => {
+      document.body.classList.toggle("blood-theme");
+
+      if (document.body.classList.contains("blood-theme")) {
+        charName.textContent = "O Carrasco";
+        activeWords = bloodWords; // muda frases
+      } else {
+        charName.textContent = originalName;
+        activeWords = normalWords; // volta frases
+      }
+    });
+  }
+});
