@@ -174,11 +174,98 @@ body {
   color: #ddd;
 }
 
+.Imagemchar {
+  position: relative;
+  width: 60%;
+  margin: 0 auto 20px auto; /* centraliza horizontalmente */
+  display: flex;
+  justify-content: center; /* centraliza conteúdo (imagem) */
+  align-items: center;
+}
+
 .img-char {
   display: block;
-  width: 60%;
-  margin: 0 auto 20px auto;
-  box-shadow: 0 0 15px rgba(200, 200, 200, 0.5);
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(200, 200, 200, 0.6),
+    0 0 40px rgba(180, 180, 180, 0.3);
+}
+
+/* Setas dentro da imagem */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: rgba(200, 200, 200, 0.7);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  user-select: none;
+  animation: floatArrow 2s ease-in-out infinite;
+  transition: color 0.3s;
+  z-index: 2; /* fica acima da imagem */
+}
+
+.arrow:hover {
+  color: #ff4444;
+}
+
+.arrow.left {
+  left: -35px; /* grudadinha do lado esquerdo */
+}
+
+.arrow.right {
+  right: -35px; /* grudadinha do lado direito */
+}
+
+@keyframes floatArrow {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-50%) translateX(5px);
+  }
+}
+
+/* Animação de “respirar” */
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Glow rúnico alternando */
+.img-char::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 15px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 80%
+  );
+  animation: glow 4s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.2;
+    box-shadow: 0 0 10px rgba(220, 220, 220, 0.3);
+  }
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+  }
 }
 
 /* Seção de Magias com mais destaque */
@@ -260,4 +347,39 @@ body {
     opacity: 0;
     transform: translateY(-50px) scale(0.9) rotate(-5deg);
   }
+}
+
+/* === TEMA BLOOD === */
+body.blood-theme {
+  background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #0d0000 100%);
+  color: #f5b5b5;
+}
+
+body.blood-theme .character-sheet {
+  background: rgba(50, 0, 0, 0.9);
+  border: 2px solid #660000;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.4), inset 0 0 60px rgba(80, 0, 0, 0.8);
+}
+
+body.blood-theme .character-name {
+  color: #ff1a1a;
+  text-shadow: 0 0 15px #b30000, 0 0 30px #ff0000;
+}
+
+body.blood-theme .section-title {
+  color: #ff6666;
+  text-shadow: 0 0 8px #ff0000;
+}
+
+body.blood-theme .stat-block {
+  background: rgba(80, 0, 0, 0.6);
+  border: 1px solid #990000;
+}
+
+body.blood-theme .skill {
+  border-left: 3px solid #800000;
+}
+
+body.blood-theme .img-char {
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.7), 0 0 50px rgba(150, 0, 0, 0.5);
 }
