@@ -60,21 +60,21 @@ setInterval(createBgRune, 3500);
 // Frases normais
 const normalWords = [
   "Who am I?",
-  "Why do I fight?",
-  "Lost soul",
-  "My blade remembers",
-  "Between shadows",
-  "Echoes of war"
+  "Silence is safer...",
+  "The words hurt...",
+  "I must not speak",
+  "The notebook will answer",
+  "If I talk, someone dies"
 ];
 
 // Frases psicopatas (modo Blood)
 const bloodWords = [
-  "RUN",
-  "I'M GONNA KILL YOU",
-  "YOUR BLOOD IS MINE",
-  "NO ESCAPE",
-  "DIE, DIE, DIE",
-  "THE CARRASCO IS HERE"
+  "MAKE IT STOP",
+  "DON'T MOVE",
+  "FALL",
+  "SLEEP FOREVER",
+  "OBEY ME",
+  "BREAK YOURSELF"
 ];
 
 // Variável que controla qual lista usar
@@ -121,8 +121,8 @@ setInterval(createCharRune, 5000);
 
 // Lista de imagens
 const images = [
-  "img/personagem.jpg",
-  "img/personagem2.jpg",
+  "img/personagem.png",
+  "img/personagem2.png",
 ];
 let currentImage = 0;
 
@@ -136,22 +136,27 @@ document.querySelector('.arrow.right').addEventListener('click', () => {
   charImg.src = images[currentImage];
 });
 
-// === Easter Egg: Blood Mode + Nome + Frases ===
+// === Easter Egg: Blood Mode + Nome + Frases + Imagem ===
 document.addEventListener("DOMContentLoaded", () => {
   const charName = document.querySelector(".character-name");
+  const charImg = document.querySelector(".img-char");
 
-  if (charName) {
+  if (charName && charImg) {
     const originalName = charName.textContent;
+    const originalImage = "img/personagem.png"; // normal
+    const bloodImage = "img/personagem3.png";   // modo Blood
 
     charName.addEventListener("click", () => {
       document.body.classList.toggle("blood-theme");
 
       if (document.body.classList.contains("blood-theme")) {
-        charName.textContent = "O Carrasco";
-        activeWords = bloodWords; // muda frases
+        charName.textContent = "The Cursed Voice";
+        activeWords = bloodWords;
+        charImg.src = bloodImage; // troca para imagem Blood
       } else {
         charName.textContent = originalName;
-        activeWords = normalWords; // volta frases
+        activeWords = normalWords;
+        charImg.src = originalImage; // volta para imagem normal
       }
     });
   }
