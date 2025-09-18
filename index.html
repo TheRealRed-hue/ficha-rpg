@@ -23,7 +23,7 @@
         <div class="Imagemchar">
           <div class="arrow left">&#9664;</div>
           <img
-            src="img/personagem.jpg"
+            src="img/personagem.png"
             alt="Imagem do Personagem"
             class="img-char"
           />
@@ -50,7 +50,7 @@
         <div class="stats-grid">
           <div class="stat-block">
             <div class="stat-label">Força</div>
-            <div class="stat-value">18 (+4)</div>
+            <div class="stat-value">19 (+4)</div>
           </div>
           <div class="stat-block">
             <div class="stat-label">Destreza</div>
@@ -62,28 +62,32 @@
           </div>
           <div class="stat-block">
             <div class="stat-label">Inteligência</div>
-            <div class="stat-value">10 ()</div>
+            <div class="stat-value">11 ()</div>
           </div>
           <div class="stat-block">
             <div class="stat-label">Sabedoria</div>
-            <div class="stat-value">12 (+1)</div>
+            <div class="stat-value">13 (+1)</div>
           </div>
           <div class="stat-block">
             <div class="stat-label">Carisma</div>
             <div class="stat-value">10 ()</div>
           </div>
           <div class="stat-block">
+            <div class="stat-label">PEA</div>
+            <div class="stat-value">2</div>
+          </div>
+          <div class="stat-block">
             <div class="stat-label">Percepção passiva</div>
-            <div class="stat-value">0</div>
+            <div class="stat-value">14</div>
           </div>
         </div>
 
         <!-- Combate -->
         <div class="section">
           <h2 class="section-title">Combate</h2>
-          <p>CA: 10 | Iniciativa: 0 | Deslocamento: 0</p>
+          <p>CA: 10 | Iniciativa: 0 | Deslocamento: 8</p>
           <p>PV: 15 / 15 | Temporários: 0</p>
-          <p>Dado de Vida: 1d12</p>
+          <p>Dado de Vida: 1d12 + mod de Constituição</p>
         </div>
 
         <!-- Perícias -->
@@ -117,7 +121,17 @@
         <!-- Magias -->
         <div class="section magias">
           <h2 class="section-title">Magias</h2>
-          <p>— Espaço para suas magias, técnicas ou artes samurai —</p>
+          <h3>Tecnica inata</h3>
+          <p class="fala-amaldiçoada">Fala amaldiçoada:</p>
+          <p class="texto-fala-amaldiçoada">
+            é uma técnica inata herdada pela linhagem Inumaki que permite ao
+            usuário imbuir palavras com energia amaldiçoada, forçando o alvo a
+            obedecer a esses comandos. Comandos como "Exploda", "Não se mova",
+            ou "Dorme" podem ter efeitos imediatos e letais, e a força do
+            comando depende da habilidade do usuário e da energia do alvo.
+            Contudo, o uso prolongado pode causar danos físicos ao próprio
+            usuário, como dor de garganta ou sangramentos
+          </p>
         </div>
 
         <!-- Personalidade -->
@@ -134,15 +148,17 @@
           <h2 class="section-title">Inventário</h2>
           <p>Moedas: PC — | PP — | PE — | PO — | PL —</p>
           <ul>
-         
+            <li>Katana</li>
+            <li>Kimono de viagem + uniforme de viagem</li>
+            <li>Caderno preto (usado para se comunicar, pois não fala)</li>
           </ul>
         </div>
 
         <!-- Proficiências -->
         <div class="section">
           <h2 class="section-title">Proficiência</h2>
-          <p>Armas: simples e marciais (espada samurai)</p>
-          <p>Armaduras leves, médias</p>
+          <p>Armas: simples e marciais</p>
+          <p>Armaduras: Todas as armaduras e escudos.</p>
           <p>Ferramentas: ferreiro</p>
           <p>Testes de resistência: Força, Constituição</p>
           <p>Perícias: Acrobacia, Percepção</p>
@@ -151,15 +167,106 @@
         <!-- Características -->
         <div class="section">
           <h2 class="section-title">Características & Feitos</h2>
-          <p><strong>Feats:</strong> —</p>
+          <p><strong>Feitos:</strong> —</p>
           <p><strong>Classe:</strong> Samurai</p>
           <p><strong>Background:</strong> —</p>
+        </div>
+
+        <!-- Estilos de luta -->
+        <div class="section">
+          <h2 class="section-title-fight">ADEPTO MARCIAL</h2>
+          <p>
+            Você tem treinamento marcial que permite a você realizar manobras de
+            combate especiais. Você ganha os seguintes benefícios:  Você
+            aprende duas manobras, à sua escolha, das que estão disponíveis ao
+            arquétipo Mestre de Batalha na classe guerreiro. Se a manobra que
+            você usar obrigar um alvo a realizar um teste de resistência, a CD
+            do teste de resistência será igual a 8 + seu bônus de proficiência +
+            seu modificador de Força ou Destreza (à sua escolha).  Se você já
+            tiver dados de superioridade, você ganha um adicional; do contrário,
+            você terá um dado de superioridade, que é um d6. Esse dado é usado
+            para abastecer suas manobras. Um dado de superioridade é gasto
+            quando você o usa. Você recupera seus dados de superioridade gastos
+            quando termina um descanso curto ou longo.
+          </p>
         </div>
 
         <!-- História -->
         <div class="section">
           <h2 class="section-title">História</h2>
-          <p>— História do personagem aqui —</p>
+          <p>
+            Alguns garotos carregam sonhos. Katsuro Mikazuki carregava silêncio.
+            Na escola, era conhecido como o menino que não falava. Não porque
+            fosse tímido, nem porque desprezasse os colegas. Era medo. Medo de
+            si mesmo. Seus lábios raramente se moviam, suas respostas eram
+            acenos curtos, gestos rápidos. Muitos o tomavam por estranho, outros
+            por arrogante. A verdade, porém, era que cada palavra lhe parecia
+            uma lâmina, afiada demais para ser usada. Katsuro não nascera
+            monstro. O monstro foi moldado em uma noite febril de sua infância.
+            Lembrava-se pouco — o corpo ardendo, a mente delirando, a garganta
+            sussurrando frases sem sentido enquanto sonhava. No quarto escuro,
+            sua mãe tentava acalmá-lo. Mas entre gemidos e palavras desconexas,
+            uma ordem escapou. Não um pedido, não um sonho, mas um comando
+            carregado de algo sombrio. Quando despertou, o silêncio era
+            absoluto. O corpo dela jazia ao lado da cama, os olhos ainda
+            abertos, como se a morte tivesse vindo sem aviso. Ele nunca soube
+            exatamente quais palavras havia dito, apenas que elas a arrancaram
+            do mundo. Desde então, viver com o pai tornou-se uma penitência. O
+            homem o olhava com uma tristeza contida, mas jamais ousava levantar
+            a voz contra ele. Não havia acusações explícitas, não havia gritos —
+            apenas uma distância que crescia a cada dia, como se ambos temessem
+            o que poderia acontecer se o silêncio fosse quebrado. E foi com esse
+            peso que Katsuro entrou na escola. Os professores estranhavam sua
+            quietude, os colegas zombavam de sua falta de fala, mas nenhum deles
+            compreendia a verdade: Katsuro era um campo minado, e cada sílaba
+            podia ser a explosão final. Nas horas de estudo, permanecia imóvel,
+            os olhos baixos, a caneta riscando cadernos que raramente entregava.
+            Se alguém perguntava algo, respondia apenas com o mínimo: “sim”,
+            “não”, e nada mais. O tom de sua voz era baixo, quase um sopro, como
+            se falasse com medo de ser ouvido. Ele não queria ser especial. Não
+            queria carregar uma herança, uma técnica, uma maldição. Queria
+            apenas ser normal. Mas o destino não perguntara o que Katsuro queria
+            — apenas lhe dera uma voz que ninguém poderia suportar. E assim,
+            entre corredores cheios de risadas que não lhe pertenciam, Katsuro
+            Mikazuki caminhava como uma sombra. Preso entre o desejo de calar-se
+            para sempre e o medo do dia em que, por descuido, suas palavras
+            escapariam novamente. Pois se uma vez matou sem querer, quem poderia
+            garantir que não aconteceria de novo?
+          </p>
+          <h3></h3>
+          <p>
+            Katsuro Mikazuki não falava. Carregava sempre um pequeno
+            <a href="caderno.html" class="texto-mark"
+              ><strong>caderno</strong></a
+            >
+            de capa preta, gasto nos cantos, com páginas manchadas pelo tempo e
+            pela pressão de sua caligrafia firme. Era sua voz. Quando precisava
+            responder a algo, abria-o devagar, escrevia poucas palavras e
+            mostrava a quem perguntasse. Às vezes, eram frases curtas: “Estou
+            bem.” Outras vezes, apenas uma palavra isolada: “Sim.” ou “Não.” Na
+            escola, logo ficou conhecido como “o garoto do caderno”. Alguns
+            riam, outros estranhavam, mas ninguém ousava tomar aquilo dele.
+            Havia algo no modo como Katsuro o segurava — como quem segura um
+            amuleto contra demônios. Seus colegas tentavam decifrá-lo. Para
+            alguns, era uma excentricidade. Para outros, um gesto de arrogância.
+            Mas apenas Katsuro sabia o verdadeiro motivo: sua garganta não era
+            confiável. Sua voz não era sua. Era uma lâmina embebida em veneno,
+            pronta para cortar o mundo ao menor descuido. Durante as aulas, os
+            professores já haviam se acostumado. Faziam perguntas, e ele erguia
+            o caderno, mostrando a resposta. Alguns insistiam para que falasse,
+            mas bastava encontrar o olhar sombrio e cansado do garoto para
+            perceber que não adiantava. Era como se falar custasse mais do que
+            ele podia pagar. Às vezes, à noite, sozinho em seu quarto, Katsuro
+            relia as páginas antigas. Ali estavam memórias não ditas, respostas
+            nunca entregues, pensamentos sufocados que só o papel conhecia.
+            Entre anotações triviais de lições e lembretes, escondiam-se frases
+            que pareciam confissões: “Eu não queria ser assim.” “A voz me
+            odeia.” “Se eu dormir de novo… quem vai morrer depois?” Cada palavra
+            escrita era um grito que ele jamais ousaria soltar em voz alta. O
+            caderno era sua prisão e também sua salvação. Enquanto tivesse onde
+            escrever, não precisaria falar. Enquanto o papel o escutasse, o
+            mundo estaria a salvo dele.
+          </p>
         </div>
       </div>
     </div>
@@ -167,4 +274,3 @@
     <script src="js/script.js"></script>
   </body>
 </html>
-
