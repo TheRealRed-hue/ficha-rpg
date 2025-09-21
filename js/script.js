@@ -122,7 +122,7 @@ setInterval(createCharRune, 5000);
 // Lista de imagens
 const images = [
   "img/personagem.png",
-  "img/personagem2.png",
+  "img/personagem_pixelado.png",
 ];
 let currentImage = 0;
 
@@ -136,7 +136,7 @@ document.querySelector('.arrow.right').addEventListener('click', () => {
   charImg.src = images[currentImage];
 });
 
-// === Easter Egg: Blood Mode + Nome + Frases + Imagem ===
+// === Blood Mode + Nome + Frases + Imagem ===
 document.addEventListener("DOMContentLoaded", () => {
   const charName = document.querySelector(".character-name");
   const charImg = document.querySelector(".img-char");
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (charName && charImg) {
     const originalName = charName.textContent;
     const originalImage = "img/personagem.png"; // normal
-    const bloodImage = "img/personagem3.png";   // modo Blood
+    const bloodImage = "img/personagem_pixelado.png";   // modo Blood
 
     charName.addEventListener("click", () => {
       document.body.classList.toggle("blood-theme");
