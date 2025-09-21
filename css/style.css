@@ -7,10 +7,10 @@
 }
 
 body {
-  background: linear-gradient(135deg, #0f0f0f 0%, #1f1f1f 50%, #0f0f0f 100%);
+  background: linear-gradient(135deg, #0d0b14 0%, #1e1930 50%, #0d0b14 100%);
   min-height: 100vh;
   font-family: "Crimson Text", serif;
-  color: #cfcfcf;
+  color: #e6e6f0;
   overflow-x: hidden;
   position: relative;
 }
@@ -20,8 +20,8 @@ body {
   position: absolute;
   font-family: "Cinzel", serif;
   font-size: 1.2rem;
-  color: rgba(200, 200, 200, 0.7);
-  text-shadow: 0 0 8px rgba(160, 160, 160, 0.8);
+  color: rgba(180, 150, 250, 0.7);
+  text-shadow: 0 0 8px rgba(150, 120, 250, 0.8);
   animation: floatRune 6s infinite linear;
   user-select: none;
 }
@@ -51,12 +51,12 @@ body {
 }
 
 .character-sheet {
-  background: rgba(20, 20, 20, 0.9);
-  border: 2px solid #8b8c8f;
+  background: rgba(30, 25, 48, 0.9);
+  border: 2px solid #7b2cbf;
   border-radius: 15px;
   padding: 40px;
-  box-shadow: 0 0 30px rgba(180, 180, 180, 0.3),
-    inset 0 0 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px rgba(180, 150, 250, 0.3),
+    inset 0 0 50px rgba(20, 15, 30, 0.5);
   position: relative;
   backdrop-filter: blur(5px);
 }
@@ -68,7 +68,7 @@ body {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #a0a0a0, #4f4f4f, #7a7a7a, #4f4f4f);
+  background: linear-gradient(45deg, #7b2cbf, #5a189a, #a78bfa, #5a189a);
   border-radius: 15px;
   z-index: -1;
   animation: borderGlow 4s ease-in-out infinite alternate;
@@ -91,23 +91,23 @@ body {
   font-family: "Cinzel", serif;
   font-size: 2.5rem;
   font-weight: 600;
-  color: #d0d0d0;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 1);
+  color: #bb86fc;
+  text-shadow: 2px 2px 6px rgba(123, 44, 191, 1);
   margin-bottom: 10px;
   letter-spacing: 2px;
 }
 .character-title {
   font-style: italic;
   font-size: 1.2rem;
-  color: #a0a0a0;
+  color: #c4b5fd;
   margin-bottom: 20px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .section-title {
   font-family: "Cinzel", serif;
   font-size: 1.5rem;
-  color: #cfcfcf;
+  color: #dcd6f7;
   margin-bottom: 20px;
   text-align: center;
   position: relative;
@@ -118,7 +118,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #666;
+  color: #7b2cbf;
   font-size: 0.8rem;
 }
 .section-title::before {
@@ -129,47 +129,47 @@ body {
 }
 
 .stat-block {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(20, 15, 30, 0.6);
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid #666;
+  border: 1px solid #7b2cbf;
   transition: all 0.3s ease;
 }
 .stat-block:hover {
-  border-color: #aaa;
-  box-shadow: 0 0 15px rgba(200, 200, 200, 0.3);
+  border-color: #a78bfa;
+  box-shadow: 0 0 15px rgba(200, 180, 250, 0.3);
 }
 .stat-label {
   font-family: "Cinzel", serif;
   font-size: 0.9rem;
-  color: #999;
+  color: #c4b5fd;
   margin-bottom: 8px;
 }
 .stat-value {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #cfcfcf;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  color: #e6e6f0;
+  text-shadow: 1px 1px 2px rgba(50, 40, 80, 0.8);
 }
 
 .section {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(20, 15, 30, 0.4);
   padding: 20px;
   margin-bottom: 25px;
   border-radius: 10px;
-  border-left: 4px solid #666;
+  border-left: 4px solid #7b2cbf;
 }
 
 .skill {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(20, 15, 30, 0.4);
   padding: 10px;
   border-radius: 6px;
-  border-left: 3px solid #666;
+  border-left: 3px solid #7b2cbf;
   display: flex;
   justify-content: space-between;
 }
 .skill.proficient {
-  border-left-color: #aaa;
+  border-left-color: #a78bfa;
   font-weight: bold;
   color: #ddd;
 }
@@ -177,9 +177,9 @@ body {
 .Imagemchar {
   position: relative;
   width: 60%;
-  margin: 0 auto 20px auto; /* centraliza horizontalmente */
+  margin: 0 auto 20px auto;
   display: flex;
-  justify-content: center; /* centraliza conteúdo (imagem) */
+  justify-content: center;
   align-items: center;
 }
 
@@ -187,37 +187,32 @@ body {
   display: block;
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(200, 200, 200, 0.6),
-    0 0 40px rgba(180, 180, 180, 0.3);
+  box-shadow: 0 0 20px rgba(180, 150, 250, 0.6),
+    0 0 40px rgba(150, 120, 250, 0.3);
 }
 
-/* Setas dentro da imagem */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
-  color: rgba(200, 200, 200, 0.7);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  color: rgba(180, 150, 250, 0.7);
+  text-shadow: 0 0 8px rgba(200, 200, 255, 0.6);
   cursor: pointer;
   user-select: none;
   animation: floatArrow 2s ease-in-out infinite;
   transition: color 0.3s;
-  z-index: 2; /* fica acima da imagem */
+  z-index: 2;
 }
-
 .arrow:hover {
-  color: #ff4444;
+  color: #bb86fc;
 }
-
 .arrow.left {
-  left: -35px; /* grudadinha do lado esquerdo */
+  left: -35px;
 }
-
 .arrow.right {
-  right: -35px; /* grudadinha do lado direito */
+  right: -35px;
 }
-
 @keyframes floatArrow {
   0%,
   100% {
@@ -228,18 +223,6 @@ body {
   }
 }
 
-/* Animação de “respirar” */
-@keyframes breathe {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-}
-
-/* Glow rúnico alternando */
 .img-char::after {
   content: "";
   position: absolute;
@@ -250,47 +233,34 @@ body {
   border-radius: 15px;
   background: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.2) 0%,
+    rgba(187, 134, 252, 0.2) 0%,
     transparent 80%
   );
   animation: glow 4s ease-in-out infinite alternate;
   z-index: -1;
 }
-
 @keyframes glow {
   0% {
     opacity: 0.2;
-    box-shadow: 0 0 10px rgba(220, 220, 220, 0.3);
+    box-shadow: 0 0 10px rgba(200, 180, 250, 0.3);
   }
   100% {
     opacity: 0.6;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 30px rgba(220, 200, 255, 0.8);
   }
 }
 
-/* Seção de Magias com mais destaque */
-.section.magias {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  padding: 30px;
-  border: 1px solid #777;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 0 15px rgba(200, 200, 200, 0.2);
-}
-
-/* Runas de fundo fixas */
 .bg-rune {
   position: fixed;
   font-family: "Cinzel", serif;
   font-size: 2rem;
-  color: rgba(220, 220, 220, 0.25); /* mais claro */
-  text-shadow: 0 0 15px rgba(220, 220, 220, 0.9),
-    0 0 25px rgba(200, 200, 200, 0.7);
+  color: rgba(200, 180, 250, 0.25);
+  text-shadow: 0 0 15px rgba(200, 180, 255, 0.9),
+    0 0 25px rgba(180, 150, 250, 0.7);
   pointer-events: none;
   animation: glowRune 6s ease-in-out forwards;
   z-index: 1;
 }
-
 @keyframes glowRune {
   0% {
     opacity: 0;
@@ -298,14 +268,12 @@ body {
   }
   20% {
     opacity: 0.8;
-    text-shadow: 0 0 20px rgba(240, 240, 240, 1),
-      0 0 35px rgba(200, 200, 200, 0.9);
   }
   50% {
     opacity: 1;
     transform: scale(1.2) rotate(180deg);
     text-shadow: 0 0 25px rgba(255, 255, 255, 1),
-      0 0 45px rgba(200, 200, 200, 0.9);
+      0 0 45px rgba(200, 200, 255, 0.9);
   }
   80% {
     opacity: 0.6;
@@ -320,14 +288,13 @@ body {
   position: fixed;
   font-family: "Cinzel", serif;
   font-size: 1.4rem;
-  color: rgba(230, 230, 230, 0.7);
+  color: rgba(220, 220, 255, 0.7);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
-    0 0 25px rgba(180, 180, 180, 0.8);
+    0 0 25px rgba(180, 180, 255, 0.8);
   pointer-events: none;
   animation: floatWord 8s ease-in-out forwards;
-  z-index: 2; /* fica acima das runas */
+  z-index: 2;
 }
-
 @keyframes floatWord {
   0% {
     opacity: 0;
@@ -349,39 +316,147 @@ body {
   }
 }
 
+.fala-amaldiçoada {
+  font-style: "cinzel", serif;
+  color: #c4b5fd;
+  text-shadow: 0 0 5px #a78bfa;
+  text-align: start;
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+
+.texto-fala-amaldiçoada {
+  font-style: "cinzel", serif;
+  color: #fffdfd;
+  text-shadow: 0 0 5px #3a2d50;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.texto-mark {
+  color: #bb86fc;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.texto-mark:hover {
+  background: rgba(187, 134, 252, 0.1);
+  box-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 8px #bb86fc, 0 0 15px #a78bfa;
+}
+
+.section-title-fight {
+  font-family: "Cinzel", serif;
+  font-size: 1.5rem;
+  color: #bb86fc;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+.section-title-fight::before,
+.section-title-fight::after {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #5a189a;
+  font-size: 0.8rem;
+}
+
+.strong-bold {
+  font-weight: bold;
+  color: #c4b5fd;
+}
+.gold {
+  color: gold;
+  font-weight: bold;
+  text-shadow: 0 0 8px gold, 0 0 15px goldenrod;
+}
+
 /* === TEMA BLOOD === */
+b/* === TEMA INUMAKI (substituindo cores do blood-theme) === */
 body.blood-theme {
-  background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #0d0000 100%);
-  color: #f5b5b5;
+  background: linear-gradient(135deg, #0d0b14 0%, #1e1930 50%, #0d0b14 100%);
+  color: #dcdcdc;
 }
 
 body.blood-theme .character-sheet {
-  background: rgba(50, 0, 0, 0.9);
-  border: 2px solid #660000;
-  box-shadow: 0 0 40px rgba(255, 0, 0, 0.4), inset 0 0 60px rgba(80, 0, 0, 0.8);
+  background: rgba(30, 25, 48, 0.9);
+  border: 2px solid #5a189a;
+  box-shadow: 0 0 40px rgba(167, 139, 250, 0.4),
+    inset 0 0 60px rgba(20, 15, 30, 0.8);
 }
 
 body.blood-theme .character-name {
-  color: #ff1a1a;
-  text-shadow: 0 0 15px #b30000, 0 0 30px #ff0000;
+  color: #bb86fc;
+  text-shadow: 0 0 15px #7b2cbf, 0 0 30px #a78bfa;
 }
 
 body.blood-theme .section-title {
-  color: #ff6666;
-  text-shadow: 0 0 8px #ff0000;
+  color: #c4b5fd;
+  text-shadow: 0 0 8px #a78bfa;
 }
 
 body.blood-theme .stat-block {
-  background: rgba(80, 0, 0, 0.6);
-  border: 1px solid #990000;
+  background: rgba(20, 15, 30, 0.6);
+  border: 1px solid #7b2cbf;
 }
 
 body.blood-theme .skill {
-  border-left: 3px solid #800000;
+  border-left: 3px solid #5a189a;
+  color: #ddd;
 }
 
 body.blood-theme .img-char {
-  box-shadow: 0 0 25px rgba(255, 0, 0, 0.7), 0 0 50px rgba(150, 0, 0, 0.5);
+  box-shadow: 0 0 25px rgba(167, 139, 250, 0.7), 0 0 50px rgba(90, 24, 154, 0.5);
+}
+
+body.blood-theme h3 {
+  color: #bb86fc;
+  text-shadow: 0 0 10px #7b2cbf, 0 0 20px #a78bfa;
+}
+
+body.blood-theme .fala-amaldiçoada {
+  color: #c4b5fd;
+  text-shadow: 0 0 5px #a78bfa;
+}
+
+body.blood-theme .texto-fala-amaldiçoada {
+  color: #e6e6f0;
+  text-shadow: 0 0 5px #3a2d50;
+}
+
+body.blood-theme .texto-mark {
+  color: #bb86fc;
+  background: none;
+}
+
+body.blood-theme .texto-mark:hover {
+  background: rgba(187, 134, 252, 0.1);
+  box-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
+  text-shadow: 0 0 8px #bb86fc, 0 0 15px #a78bfa;
+}
+
+body.blood-theme .section-title-fight {
+  color: #bb86fc;
+  text-shadow: 0 0 10px #7b2cbf, 0 0 20px #a78bfa;
+}
+
+body.blood-theme .strong-bold {
+  color: #c4b5fd;
+}
+
+body.blood-theme a {
+  color: #c4b5fd;
+}
+
+body.blood-theme a:hover {
+  color: #bb86fc;
 }
 
 .inventory-list {
@@ -404,7 +479,7 @@ body.blood-theme .img-char {
 }
 
 a {
-  color: #ff6666;
+  color: #bb86fc;
   text-decoration: none;
   transition: color 0.3s;
   font-size: 35px;
@@ -415,14 +490,14 @@ h3 {
   margin-bottom: 15px;
   font-family: "Cinzel", serif;
   font-size: 1.3rem;
-  color: #ff4d4d;
-  text-shadow: 0 0 10px #ff1a1a, 0 0 20px #b30000;
+  color: #c4b5fd;
+  text-shadow: 0 0 10px #a78bfa, 0 0 20px #7b2cbf;
 }
 
 .fala-amaldiçoada {
   font-style: "cinzel", serif;
-  color: #ff9999;
-  text-shadow: 0 0 5px #ff4d4d;
+  color: #c4b5fd;
+  text-shadow: 0 0 5px #a78bfa;
   text-align: start;
   margin-bottom: 10px;
   font-size: 23px;
@@ -431,13 +506,13 @@ h3 {
 .texto-fala-amaldiçoada {
   font-style: "cinzel", serif;
   color: #fffdfd;
-  text-shadow: 0 0 5px #292727;
+  text-shadow: 0 0 5px #3a2d50;
   margin-top: 5px;
   font-size: 20px;
 }
 
 .texto-mark {
-  color: #ff0000;
+  color: #bb86fc;
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: bold;
@@ -445,18 +520,18 @@ h3 {
 }
 
 .texto-mark:hover {
-  background: rgba(255, 0, 0, 0.1);
-  box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  background: rgba(187, 134, 252, 0.1);
+  box-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
   cursor: pointer;
   text-decoration: underline;
   transition: all 0.3s ease;
-  text-shadow: 0 0 8px #ff1a1a, 0 0 15px #b30000;
+  text-shadow: 0 0 8px #bb86fc, 0 0 15px #a78bfa;
 }
 
 .section-title-fight {
   font-family: "Cinzel", serif;
   font-size: 1.5rem;
-  color: #ff0000;
+  color: #bb86fc;
   margin-bottom: 20px;
   text-align: center;
   position: relative;
@@ -467,6 +542,17 @@ h3 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #660000;
+  color: #5a189a;
   font-size: 0.8rem;
+}
+
+.strong-bold {
+  font-weight: bold;
+  color: #c4b5fd;
+}
+
+.gold {
+  color: #f5f1ff;
+  font-weight: bold;
+  text-shadow: 0 0 8px #d0c4ff, 0 0 15px #b5aaff;
 }
