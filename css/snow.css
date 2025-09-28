@@ -1,0 +1,32 @@
+/* Contêiner da neve */
+.snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Cada floco de neve */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 1em;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+/* Animação de queda + vento */
+@keyframes fall {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(var(--wind, 100px)) translateY(110vh) rotate(360deg);
+    opacity: 0.2;
+  }
+}
