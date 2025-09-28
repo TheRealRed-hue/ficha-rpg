@@ -2,52 +2,63 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ficha de RPG - Katsu Inumaki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ficha de RPG - Alma Fragmentada</title>
+    <link rel="stylesheet" href="css/snow.css" />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/png" href="img/logo.png" />
   </head>
   <body>
     <!-- Runas -->
-    <div class="rune"></div>
+    <div class="rune" aria-hidden="true"></div>
 
-    <div class="container">
-      <div class="character-sheet">
+    <main class="container">
+      <article class="character-sheet">
         <!-- Header -->
-        <div class="header">
+        <header class="header">
           <h1 class="character-name">Katsuro Inumaki</h1>
-          <p class="character-title">"As vezes a compreensão não precisa ser ouvida.."</p>
+          <p class="character-title">
+            "Às vezes a compreensão não precisa ser ouvida..."
+          </p>
           <p class="player">Jogador: Red</p>
-        </div>
+        </header>
 
-        <div class="Imagemchar">
-          <div class="arrow left">&#9664;</div>
+        <section class="Imagemchar" aria-label="Imagem do personagem">
+          <button class="arrow left" aria-label="Personagem anterior">
+            &#9664;
+          </button>
           <img
             src="img/personagem.png"
-            alt="Imagem do Personagem"
+            alt="Imagem do personagem Katsuro Inumaki"
             class="img-char"
+            loading="lazy"
           />
-          <div class="arrow right">&#9654;</div>
-        </div>
+          <button class="arrow right" aria-label="Próximo personagem">
+            &#9654;
+          </button>
+        </section>
 
         <!-- Aparência -->
-        <div class="section">
-          <h2 class="section-title">Aparência</h2>
-          <p>Olhos: Castanhos claros | Cabelos: bagunçado | Pele: Branca</p>
-          <p>Idade: 16 | Altura: 1.76 | Peso: 65kg</p>
+        <section class="section" aria-labelledby="aparencia-title">
+          <h2 id="aparencia-title" class="section-title">Aparência</h2>
+          <p>Olhos: Castanhos claros | Cabelos: Bagunçado | Pele: Branca</p>
+          <p>Idade: 16 | Altura: 1,76m | Peso: 65kg</p>
           <p>Facção: Nenhuma, atualmente estudante de ensino médio</p>
-        </div>
+        </section>
 
         <!-- Informações Básicas -->
-        <div class="section">
-          <h2 class="section-title">Informações Básicas</h2>
-          <p>Classe: Lutador (nivel 2)| Raça: Humano</p>
+        <section class="section" aria-labelledby="info-basicas-title">
+          <h2 id="info-basicas-title" class="section-title">
+            Informações Básicas
+          </h2>
+          <p>Classe: Lutador (nível 2) | Raça: Humano</p>
           <p>Alinhamento: — | Inspiração: —</p>
           <p>Bônus de Proficiência: +2 | XP: 0</p>
-        </div>
+        </section>
 
         <!-- Atributos -->
-        <div class="stats-grid">
+        <section class="stats-grid" aria-label="Atributos do personagem">
           <div class="stat-block">
             <div class="stat-label">Força</div>
             <div class="stat-value">18 (+4)</div>
@@ -62,7 +73,7 @@
           </div>
           <div class="stat-block">
             <div class="stat-label">Inteligência</div>
-            <div class="stat-value">13 (3)</div>
+            <div class="stat-value">13 (+1)</div>
           </div>
           <div class="stat-block">
             <div class="stat-label">Sabedoria</div>
@@ -70,41 +81,41 @@
           </div>
           <div class="stat-block">
             <div class="stat-label">Carisma</div>
-            <div class="stat-value">16 (+2)</div>
+            <div class="stat-value">16 (+3)</div>
           </div>
           <div class="stat-block">
             <div class="stat-label">PEA</div>
             <div class="stat-value">7</div>
           </div>
-        </div>
+        </section>
 
         <!-- Combate -->
-        <div class="section">
-          <h2 class="section-title">Combate</h2>
-          <p>CA: 16 | Iniciativa: Destreza | Deslocamento: 8</p>
-          <p>PV: 121 /  121 | Temporários: 0</p>
-          <p>PEA: 7/7</p>
-          <p>Dado de Vida: 1d12 + mod de Constituição</p>
-        </div>
+        <section class="section" aria-labelledby="combate-title">
+          <h2 id="combate-title" class="section-title">Combate</h2>
+          <p>CA: 16 | Iniciativa: Destreza | Deslocamento: 8m</p>
+          <p>PV: 121 / 121 | Temporários: 0</p>
+          <p>PEA: 7 / 7</p>
+          <p>Dado de Vida: 1d12 + modificador de Constituição</p>
+        </section>
 
         <!-- Perícias -->
-        <div class="skills">
-          <h2 class="section-title">Perícias</h2>
+        <section class="skills" aria-labelledby="pericias-title">
+          <h2 id="pericias-title" class="section-title">Perícias</h2>
           <div class="skill-list">
             <div class="skill">Arcanismo <span>+0</span></div>
             <div class="skill">História <span>+0</span></div>
             <div class="skill proficient">Investigação <span>+2</span></div>
             <div class="skill proficient">Percepção <span>+2</span></div>
-            <div class="skill ">Persuasão <span>+2</span></div>
+            <div class="skill">Persuasão <span>+2</span></div>
             <div class="skill">Acrobacia <span>+0</span></div>
             <div class="skill">Atletismo <span>+0</span></div>
             <div class="skill">Furtividade <span>+0</span></div>
           </div>
-        </div>
+        </section>
 
         <!-- Salvaguardas -->
-        <div class="skills">
-          <h2 class="section-title">Salvaguardas</h2>
+        <section class="skills" aria-labelledby="salvaguardas-title">
+          <h2 id="salvaguardas-title" class="section-title">Salvaguardas</h2>
           <div class="skill-list">
             <div class="skill proficient">Força <span>+2</span></div>
             <div class="skill">Destreza <span>0</span></div>
@@ -113,366 +124,424 @@
             <div class="skill">Sabedoria <span>0</span></div>
             <div class="skill">Carisma <span>0</span></div>
           </div>
-        </div>
+        </section>
 
-        <!-- Magias -->
-       <div class="section">
-  <h2 class="section-title">Técnica Inata — Fala Amaldiçoada</h2>
-  <p>
-    A <strong>Fala Amaldiçoada</strong> é uma técnica inata herdada pela linhagem Inumaki que permite
-    ao usuário imbuir palavras com energia amaldiçoada, forçando o alvo a obedecer a esses
-    comandos. Comandos como <em>“Exploda”</em>, <em>“Não se mova”</em> ou <em>“Durma”</em> podem ter efeitos
-    imediatos e devastadores. Quanto mais poderoso o comando, maior o custo de energia e
-    maior o risco de exaustão e ferimentos para o próprio usuário. 
-  </p>
-  <p>
-    Contudo, o uso prolongado pode causar efeitos colaterais: dor de garganta, rouquidão,
-    sangramentos e até danos internos severos, já que a energia amaldiçoada destrói o corpo
-    do conjurador enquanto força a realidade a obedecer sua voz.
-  </p>
-  <p><strong>Tipo:</strong> Técnica Amaldiçoada Inata <br>
-     <strong>Alcance:</strong> 18 metros (60 pés) <br>
-     <strong>Requisitos:</strong> O alvo deve estar dentro do alcance, ser capaz de ouvir e compreender sua língua. Criaturas <strong>surdas</strong> ou <strong>imunes a encantamento</strong> são imunes.
-  </p>
+        <!-- Magias / Técnica Inata -->
+        <section class="section" aria-labelledby="tecnica-inata-title">
+          <h2 id="tecnica-inata-title" class="section-title">
+            Técnica Inata — Fala Amaldiçoada
+          </h2>
+          <p>
+            A <strong>Fala Amaldiçoada</strong> é uma técnica inata herdada pela
+            linhagem Inumaki que permite ao usuário imbuir palavras com energia
+            amaldiçoada, forçando o alvo a obedecer a esses comandos. Comandos
+            como <em>“Exploda”</em>, <em>“Não se mova”</em> ou
+            <em>“Durma”</em> podem ter efeitos imediatos e devastadores. Quanto
+            mais poderoso o comando, maior o custo de energia e maior o risco de
+            exaustão e ferimentos para o próprio usuário.
+          </p>
+          <p>
+            Contudo, o uso prolongado pode causar efeitos colaterais: dor de
+            garganta, rouquidão, sangramentos e até danos internos severos, já
+            que a energia amaldiçoada destrói o corpo do conjurador enquanto
+            força a realidade a obedecer sua voz.
+          </p>
+          <p>
+            <strong>Tipo:</strong> Técnica Amaldiçoada Inata <br />
+            <strong>Alcance:</strong> 18 metros (60 pés) <br />
+            <strong>Requisitos:</strong> O alvo deve estar dentro do alcance,
+            ser capaz de ouvir e compreender sua língua. Criaturas
+            <strong>surdas</strong> ou
+            <strong>imunes a encantamento</strong> são imunes.
+          </p>
 
-  <h3>Palavras Amaldiçoadas</h3>
-  <ul>
-    <li>
-      <strong>"Pare!"</strong> — Custo: <span class="gold">1 PEA</span><br>
-      O alvo deve realizar um teste de <strong>Constituição</strong> contra sua CD.<br>
-      <em>Falha:</em> perde a ação no próximo turno.
-      
-    </li>
+          <h3>Palavras Amaldiçoadas</h3>
+          <ul>
+            <li>
+              <strong>"Pare!"</strong> — Custo: <span class="gold">1 PEA</span
+              ><br />
+              O alvo deve realizar um teste de
+              <strong>Constituição</strong> contra sua CD.<br />
+              <em>Falha:</em> perde a ação no próximo turno.
+            </li>
 
-    <li>
-      <strong>"Durma!"</strong> — Custo: <span class="gold">2 PEA</span><br>
-      O alvo deve realizar um teste de <strong>Sabedoria</strong> contra sua CD.<br>
-      <em>Falha:</em> fica <em>inconsciente</em> até sofrer dano ou até o final do próximo turno.
-    </li>
+            <li>
+              <strong>"Durma!"</strong> — Custo: <span class="gold">2 PEA</span
+              ><br />
+              O alvo deve realizar um teste de <strong>Sabedoria</strong> contra
+              sua CD.<br />
+              <em>Falha:</em> fica <em>inconsciente</em> até sofrer dano ou até
+              o final do próximo turno.
+            </li>
 
-    <li>
-      <strong>"Exploda!"</strong> — Custo: <span class="gold">2 PEA</span><br>
-      O alvo deve realizar um teste de <strong>Carisma</strong> contra sua CD.<br>
-      <em>Falha:</em> sofre <code>4dX + mod. Carisma + mod. Sabedoria</code> de dano.<br>
-      <em>Sucesso:</em> sofre metade.<br>
-      <u>Overcharge:</u> adiciona +1 PEA. O dano sobe para <code>8dX</code> e o alvo é arremessado 6m para trás.<br>
-      Após usar, role <code>1d4</code> para fadiga.
-    </li>
+            <li>
+              <strong>"Exploda!"</strong> — Custo:
+              <span class="gold">2 PEA</span><br />
+              O alvo deve realizar um teste de <strong>Carisma</strong> contra
+              sua CD.<br />
+              <em>Falha:</em> sofre
+              <code>4dX + mod. Carisma + mod. Sabedoria</code> de dano.<br />
+              <em>Sucesso:</em> sofre metade.<br />
+              <u>Overcharge:</u> adiciona +1 PEA. O dano sobe para
+              <code>8dX</code> e o alvo é arremessado 6m para trás.<br />
+              Após usar, role <code>1d4</code> para fadiga.
+            </li>
 
-    <li>
-      <strong>"Afaste-se!"</strong> — Custo: <span class="gold">1 PEA</span> (ação bônus)<br>
-      O alvo deve realizar um teste de <strong>Destreza</strong> contra sua CD.<br>
-      <em>Falha:</em> deve usar toda a movimentação para se afastar de você no próximo turno.
-    </li>
+            <li>
+              <strong>"Afaste-se!"</strong> — Custo:
+              <span class="gold">1 PEA</span> (ação bônus)<br />
+              O alvo deve realizar um teste de <strong>Destreza</strong> contra
+              sua CD.<br />
+              <em>Falha:</em> deve usar toda a movimentação para se afastar de
+              você no próximo turno.
+            </li>
 
-    <li>
-      <strong>"Proteja-se!"</strong> — Custo: <span class="gold">2 PEA</span> (reação)<br>
-      Quando você ou um aliado em até 9m for alvo de um ataque:<br>
-      - Recebe resistência a todos os danos do ataque.<br>
-      - Ganha <code>4dX + mod. da energia amaldiçoada</code> PV temporários até o início do seu próximo turno.
-    </li>
+            <li>
+              <strong>"Proteja-se!"</strong> — Custo:
+              <span class="gold">2 PEA</span> (reação)<br />
+              Quando você ou um aliado em até 9m for alvo de um ataque:<br />
+              - Recebe resistência a todos os danos do ataque.<br />
+              - Ganha <code>4dX + mod. da energia amaldiçoada</code> PV
+              temporários até o início do seu próximo turno.
+            </li>
 
-    <li>
-      <strong>"Fique!"</strong> — Custo: <span class="gold">1 PEA</span><br>
-      O alvo deve realizar um teste de <strong>Força</strong> contra sua CD.<br>
-      <em>Falha:</em> fica <em>paralisado</em> até o início do seu próximo turno.
-    </li>
-  </ul>
+            <li>
+              <strong>"Fique!"</strong> — Custo: <span class="gold">1 PEA</span
+              ><br />
+              O alvo deve realizar um teste de <strong>Força</strong> contra sua
+              CD.<br />
+              <em>Falha:</em> fica <em>paralisado</em> até o início do seu
+              próximo turno.
+            </li>
+          </ul>
 
-  <h3>Limitações da Voz</h3>
-  <p>Após cada uso, role <code>1d4</code> para efeitos colaterais:</p>
-  <ul>
-    <li><strong>1–2:</strong> Sem efeito aparente.</li>
-    <li><strong>3:</strong> Sua voz fica rouca; sofre desvantagem em testes de Carisma até descansar.</li>
-    <li><strong>4:</strong> Sofre <code>4dX</code> de dano necrótico.</li>
-  </ul>
+          <h3>Limitações da Voz</h3>
+          <p>Após cada uso, role <code>1d4</code> para efeitos colaterais:</p>
+          <ul>
+            <li><strong>1–2:</strong> Sem efeito aparente.</li>
+            <li>
+              <strong>3:</strong> Sua voz fica rouca; sofre desvantagem em
+              testes de Carisma até descansar.
+            </li>
+            <li>
+              <strong>4:</strong> Sofre <code>4dX</code> de dano necrótico.
+            </li>
+          </ul>
 
-  <h3>Liberação Máxima — Comando Total</h3>
-  <p>
-    <strong>Custo:</strong> <span class="gold">6 PEA</span> | <em>Ação:</em> 1 Ação
-  </p>
-  <p>
-    Você dá uma ordem absoluta a até 3 criaturas em um raio de 18m. Cada alvo deve realizar um teste de 
-    <strong>Sabedoria</strong> contra sua CD.<br>
-    <em>Falha:</em> obedece fielmente à ordem dada. Ordens não podem ser suicidas diretas (“morra”), mas podem ser cruéis
-    (“lutem entre si”, “fujam sem parar”, “ajoelhem-se”). 
-  </p>
-  <p><strong>Limitação:</strong> após usar, você sofre <span class="gold">5 níveis de exaustão</span>.</p>
-</div>
-
+          <h3>Liberação Máxima — Comando Total</h3>
+          <p>
+            <strong>Custo:</strong> <span class="gold">6 PEA</span> |
+            <em>Ação:</em> 1 Ação
+          </p>
+          <p>
+            Você dá uma ordem absoluta a até 3 criaturas em um raio de 18m. Cada
+            alvo deve realizar um teste de
+            <strong>Sabedoria</strong> contra sua CD.<br />
+            <em>Falha:</em> obedece fielmente à ordem dada. Ordens não podem ser
+            suicidas diretas (“morra”), mas podem ser cruéis (“lutem entre si”,
+            “fujam sem parar”, “ajoelhem-se”).
+          </p>
+          <p>
+            <strong>Limitação:</strong> após usar, você sofre
+            <span class="gold">5 níveis de exaustão</span>.
+          </p>
+        </section>
 
         <!-- Personalidade -->
-        <div class="section">
-          <h2 class="section-title">Personalidade</h2>
+        <section class="section" aria-labelledby="personalidade-title">
+          <h2 id="personalidade-title" class="section-title">Personalidade</h2>
           <p><strong>Traços:</strong> —</p>
           <p><strong>Ideais:</strong> —</p>
           <p><strong>Vínculos:</strong> —</p>
           <p><strong>Fraquezas:</strong> —</p>
-        </div>
+        </section>
 
         <!-- Inventário -->
-        <div class="section">
-          <h2 class="section-title">Inventário</h2>
-          <p>Yen: <strong class="gold"> 1300 </strong> </p>
+        <section class="section" aria-labelledby="inventario-title">
+          <h2 id="inventario-title" class="section-title">Inventário</h2>
+          <p>Yen: <strong class="gold">10</strong></p>
           <ul>
-            <li> </li>
-            <li>Cestus (1d4) Concussão </li>
+            <li>Cestus (1d4) Concussão</li>
             <li>Caderno preto (usado para se comunicar, pois não fala)</li>
-            <li>saco de dormir</li>
-            <li>um kit refeição</li>
-            <li>uma caixa de fogo</li>
-            <li>10 tochas</li>
-            <li>10 dias de rações e um cantil</li>
-            <li>roupas comuns</li>
+            <li>Roupas comuns</li>
+            <li>
+              <a href="inventario.html" class="abrir-inv">abrir inventario</a>
+            </li>
           </ul>
-        </div>
+        </section>
 
         <!-- Proficiências -->
-        <div class="section">
-          <h2 class="section-title">Proficiência</h2>
-          <p>Armas: Todas as armas com propriedade corporal, adagas, dardos, fundas, bordões, bestas leves</p>
-          <p>Armaduras: Leves e medias.</p>
+        <section class="section" aria-labelledby="proficiencias-title">
+          <h2 id="proficiencias-title" class="section-title">Proficiências</h2>
+          <p>
+            Armas: Todas as armas com propriedade corporal, adagas, dardos,
+            fundas, bordões, bestas leves
+          </p>
+          <p>Armaduras: Leves e médias</p>
           <p>Ferramentas: Nenhuma</p>
           <p>Testes de resistência: Força, Constituição</p>
           <p>Perícias: Acrobacia, Percepção</p>
-        </div>
+        </section>
 
-        <!-- Características -->
-        <div class="section">
-          <h2 class="section-title">Características & Feitos</h2>
+        <!-- Características & Feitos -->
+        <section class="section" aria-labelledby="caracteristicas-title">
+          <h2 id="caracteristicas-title" class="section-title">
+            Características & Feitos
+          </h2>
           <p><strong>Feitos:</strong> —</p>
-          <p><strong>Classe:</strong> Lutador (1) Barbaro (1) </p>
+          <p><strong>Classe:</strong> Lutador (1) Bárbaro (1)</p>
           <p><strong>Background:</strong> —</p>
-        </div>
+        </section>
 
         <!-- Estilos de luta -->
-        <div class="section">
-          <h2 class="section-title-fight">ADEPTO MARCIAL</h2>
+        <section class="section" aria-labelledby="adepto-marcial-title">
+          <h2 id="adepto-marcial-title" class="section-title-fight">Alerta</h2>
           <p>
-            Você tem treinamento marcial que permite a você realizar manobras de
-            combate especiais. Você ganha os seguintes benefícios:  Você
-            aprende duas manobras, à sua escolha, das que estão disponíveis ao
-            arquétipo Mestre de Batalha na classe guerreiro. Se a manobra que
-            você usar obrigar um alvo a realizar um teste de resistência, a CD
-            do teste de resistência será igual a 8 + seu bônus de proficiência +
-            seu modificador de Força ou Destreza (à sua escolha).  Se você já
-            tiver dados de superioridade, você ganha um adicional; do contrário,
-            você terá um dado de superioridade, que é um d6. Esse dado é usado
-            para abastecer suas manobras. Um dado de superioridade é gasto
-            quando você o usa. Você recupera seus dados de superioridade gastos
-            quando termina um descanso curto ou longo.
+            Você não pode ser surpreendido enquanto estiver consciente. Além
+            disso, criaturas hostis não ganham vantagem em ataques contra você
+            enquanto você estiver consciente.
           </p>
-        </div>
+          <p>+5 em testes de iniciativa</p>
+        </section>
 
-        <div class="section">
-          <h2 class="section-title-fight">FUNDAMENTOS MARCIAIS</h2>
+        <section class="section" aria-labelledby="fundamentos-marcais-title">
+          <h2 id="fundamentos-marcais-title" class="section-title-fight">
+            FUNDAMENTOS MARCIAIS
+          </h2>
           <h3>Mão pesada</h3>
           <p>
-            Você pode rolar um d4 no lugar do
-dano normal dos seus golpes desarmados. Esse
-dado muda à medida que você adquire níveis de
-Lutador, como mostrado na coluna “Fundamentos
-Marciais” na tabela O Lutador.           </p>
-<h3>Fluidez</h3>
-<p>Você pode usar Destreza ao invés de Força
-para as jogadas de ataque e dano dos seus golpes
-desarmados.</p>
-<h3>Golpe no Ponto Vital</h3>
-<p>Seu crítico natural para
-ataques desarmados é de 19 a 20.</p>
-<h3>Sequência</h3>
-<p>Sempre que fizer um ataque e ser um
-crítico natural, você ganha um ataque adicional que
-pode ser feito imediatamente após seu crítico
-natural.</p>
-<h3>Submissão</h3>
-<p>Você pode fazer uma tentativa de
-agarrão ou encontrão como ação bônus, caso tenha
-acertado um ataque no seu turno.</p>
-<h3>Mudança de forma</h3>
-<p>Seus ataques desarmados
-podem causar dano de Concussão, Perfurante ou
-Cortante, a sua escolha. Mesmo usando armas
-corporais que causam outro tipo de dano.</p>
-        </div>
-
-        <div class="section">
-          <h2 class="section-title-fight">DEFESA SEM ARMADURA</h2>
-          <h3>Nivel 1</h3>
-          <p>
-           Quando você não estiver vestindo nenhuma armadura
-nem empunhando um escudo, sua Classe de Armadura
-será 10 + seu modificador de Destreza + seu
-modificador de Constituição.
+            Você pode rolar um d4 no lugar do dano normal dos seus golpes
+            desarmados. Esse dado aumenta conforme seus níveis de Lutador.
           </p>
-        </div>
-
-        <div class="section">
-          <h3 class="section-title-fight">Furia</h3>
+          <h3>Fluidez</h3>
           <p>
-            Em batalha, você luta com uma ferocidade primitiva. No
-seu turno, você pode entrar em fúria com uma ação
-bônus.
-Enquanto estiver em fúria, você recebe os seguintes
-benefícios se você não estiver vestindo uma armadura
-pesada:
-<li>Você tem vantagem em testes de Força e testes de
-resistência de Força.</li>
-<li>Quando você desferir um ataque com arma corpo-a-
-corpo usando Força, você recebe um bônus nas jogadas
-
-de dano que aumenta à medida que você adquire
-níveis de bárbaro, como mostrado na coluna Dano de
-Fúria na tabela O Bárbaro.</li>
-<li>Você possui resistência contra dano de concussão,
-cortante e perfurante.</li>
-<p>-</p>
-<p>Se você for capaz de conjurar magias, você não poderá
-conjurá-las ou se concentrar nelas enquanto estiver em
-fúria.
-Sua fúria dura por 1 minuto. Ela termina
-prematuramente se você cair inconsciente ou se seu turno
-acabar e você não tiver atacado nenhuma criatura hostil
-desde seu último turno ou não tiver sofrido dano nesse
-período. Você também pode terminar sua fúria no seu
-turno com uma ação bônus.
-Quando você tiver usado a quantidade de fúrias
-mostrada para o seu nível de bárbaro na coluna Fúrias da
-tabela O Bárbaro, você precisará terminar um descanso
-longo antes de poder entrar em fúria novamente.</p>
+            Você pode usar Destreza ao invés de Força para jogadas de ataque e
+            dano dos seus golpes desarmados.
           </p>
-        </div>
-
-        <div class="section">
-          <h2 class="section-title-fight">Mestre de batalha</h2>
-          <h3>Superioridade em combate</h3>
+          <h3>Golpe no Ponto Vital</h3>
+          <p>Seu crítico natural para ataques desarmados é 19 a 20.</p>
+          <h3>Sequência</h3>
           <p>
-            Quando você escolhe esse arquétipo, no 3° nível, você aprende
-            manobras que são abastecidas com dados especiais chamados dados de
-            superioridade. Manobras . Você aprende três manobras, à sua escolha,
-            que são detalhadas em “Manobras”, a seguir. Muitas manobras
-            aprimoram um ataque de várias formas. Você só pode usar uma manobra
-            por ataque. Você aprende duas manobras adicionais, à sua escolha, no
-            7°, 10° e 15° nível. A cada vez que você aprende uma nova manobra,
-            você pode substituir uma manobra conhecida por uma diferente. Dados
-            de Superioridade . Você tem quatro dados de superioridade, que são
-            d8s. Um dado de superioridade é gasto quando você usa -o. Você
-            recupera todos os dados de superioridade gastos quando terminar um
-            descanso curto ou longo. Você adquire outro dado de superioridade no
-            7° nível e mais um no 15° nível. Teste de Resistência. Algumas das
-            suas manobras exigem que o alvo realize um teste de resistência
-            contra o efeito da manobra. A CD do teste de resistência é calculada
-            a seguir: CD para suas manobras = 8 + bônus de proficiência + seu
-            modificador de Força ou Destreza (à sua escolha )
-
-            <h3>Contra ataque</h3>
-            <p> Quando uma criatura atacar você
-com um ataque corpo-a-corpo e errar, você pode usar sua
-reação e gastar um dado de superioridade para realizar
-um ataque corpo-a-corpo com arma contra essa criatura.
-Se você atingir, você adiciona seu dado de superioridade a
-jogada de dano do ataque.</p>
-
-<h3>ataque de precisão</h3>
-<p>Ataque de Precisão. Quando você realizar uma
-jogada de ataque com arma contra uma criatura, você
-pode gastar um dado de superioridade para adicioná-lo a
-jogada. Você pode usar essa manobra antes ou depois de
-realizar a jogada de ataque, mas deve usá-la antes de
-qualquer efeito do ataque ser aplicado.</p>
+            Sempre que fizer um ataque e for um crítico natural, ganha um ataque
+            adicional imediatamente após.
           </p>
-        </div>
-<div class="section">
-          <h2 class="section-title-fight">Reforço corporal</h2>
-          <h3>Nivel 1</h3>
+          <h3>Submissão</h3>
           <p>
-           Custo: 1 PEA
-Efeito: Adiciona +d4 ao dano ou resistência do próximo ataque físico
-Classe sugerida: Lutador
-
+            Pode fazer uma tentativa de agarrão ou encontrão como ação bônus,
+            caso tenha acertado um ataque no seu turno.
           </p>
-        </div>
+          <h3>Mudança de forma</h3>
+          <p>
+            Seus ataques desarmados podem causar dano de Concussão, Perfurante
+            ou Cortante, à sua escolha, mesmo usando armas corporais que causam
+            outro tipo de dano.
+          </p>
+        </section>
+
+        <section class="section" aria-labelledby="defesa-sem-armadura-title">
+          <h2 id="defesa-sem-armadura-title" class="section-title-fight">
+            DEFESA SEM ARMADURA
+          </h2>
+          <h3>Nível 1</h3>
+          <p>
+            Quando não estiver vestindo armadura nem empunhando escudo, sua
+            Classe de Armadura será 10 + modificador de Destreza + modificador
+            de Constituição.
+          </p>
+        </section>
+
+        <section class="section" aria-labelledby="furia-title">
+          <h2 id="furia-title" class="section-title-fight">Fúria</h2>
+          <p>
+            Em batalha, você luta com ferocidade primitiva. No seu turno, pode
+            entrar em fúria com uma ação bônus.
+          </p>
+          <ul>
+            <li>
+              Vantagem em testes de Força e testes de resistência de Força.
+            </li>
+            <li>
+              Bônus nas jogadas de dano com armas corpo-a-corpo usando Força,
+              que aumenta com níveis de bárbaro.
+            </li>
+            <li>
+              Resistência contra dano de concussão, cortante e perfurante.
+            </li>
+            <li>
+              Você não pode conjurar magias ou se concentrar nelas enquanto
+              estiver em fúria.
+            </li>
+          </ul>
+          <p>
+            Sua fúria dura 1 minuto. Ela termina prematuramente se você cair
+            inconsciente, ou se seu turno acabar e você não tiver atacado
+            nenhuma criatura hostil desde seu último turno, nem sofrido dano
+            nesse período. Você também pode terminar sua fúria no seu turno com
+            uma ação bônus.
+          </p>
+          <p>
+            Quando usar a quantidade de fúrias mostrada para seu nível de
+            bárbaro na tabela O Bárbaro, precisará terminar um descanso longo
+            antes de entrar em fúria novamente.
+          </p>
+        </section>
+
+        <section class="section" aria-labelledby="reforco-corporal-title">
+          <h2 id="reforco-corporal-title" class="section-title-fight">
+            Reforço Corporal
+          </h2>
+          <h3>Nível 1</h3>
+          <p>
+            <strong>Custo:</strong> 1 PEA<br />
+            <strong>Efeito:</strong> Adiciona +d4 ao dano ou resistência do
+            próximo ataque físico.<br />
+            <strong>Classe sugerida:</strong> Lutador
+          </p>
+        </section>
+
+        <section class="section" aria-labelledby="reforco-corporal-title">
+          <h2 id="reforco-corporal-title" class="section-title-fight">
+            Golpe de Sombra
+          </h2>
+          <h3>Nível 2</h3>
+          <p>
+            <strong>Custo:</strong> 2 PEA<br />
+            <strong>Efeito:</strong> O inimigo sofre desvantagem em testes de
+            resistência de Sabedoria até seu próximo turno.<br />
+            <strong>Classe sugerida:</strong> Lutador
+            <strong>Dano: 1dX + mod do atributo de energia</strong>
+          </p>
+        </section>
+
+        <section class="section" aria-labelledby="reforco-corporal-title">
+          <h2 id="reforco-corporal-title" class="section-title-fight">
+            Visão da Energia
+          </h2>
+          <h3>Nível 2</h3>
+          <p>
+            <strong>Custo:</strong> 2 PEA<br />
+            <strong>Efeito:</strong> O inimigo sofre desvantagem em testes de
+            resistência de Sabedoria até seu próximo turno.<br />
+            <strong>Classe sugerida:</strong> Lutador
+            <strong
+              >Detecta presenças amaldiçoadas ou energia em 18m; ignora
+              obstáculos finos Classe sugerida: Conjurador,
+              Cadáver Amaldiçoado</strong
+            >
+          </p>
+        </section>
+
         <!-- História -->
-        <div class="section">
-          <h2 class="section-title">História</h2>
+        <section class="section" aria-labelledby="historia-title">
+          <h2 id="historia-title" class="section-title">História</h2>
           <p>
             Alguns garotos carregam sonhos. Katsuro Mikazuki carregava silêncio.
-            Na escola, era conhecido como o menino que não falava. Não porque
-            fosse tímido, nem porque desprezasse os colegas. Era medo. Medo de
-            si mesmo. Seus lábios raramente se moviam, suas respostas eram
-            acenos curtos, gestos rápidos. Muitos o tomavam por estranho, outros
-            por arrogante. A verdade, porém, era que cada palavra lhe parecia
-            uma lâmina, afiada demais para ser usada. Katsuro não nascera
-            monstro. O monstro foi moldado em uma noite febril de sua infância.
-            Lembrava-se pouco — o corpo ardendo, a mente delirando, a garganta
-            sussurrando frases sem sentido enquanto sonhava. No quarto escuro,
-            sua mãe tentava acalmá-lo. Mas entre gemidos e palavras desconexas,
-            uma ordem escapou. Não um pedido, não um sonho, mas um comando
-            carregado de algo sombrio. Quando despertou, o silêncio era
-            absoluto. O corpo dela jazia ao lado da cama, os olhos ainda
-            abertos, como se a morte tivesse vindo sem aviso. Ele nunca soube
-            exatamente quais palavras havia dito, apenas que elas a arrancaram
-            do mundo. Desde então, viver com o pai tornou-se uma penitência. O
-            homem o olhava com uma tristeza contida, mas jamais ousava levantar
-            a voz contra ele. Não havia acusações explícitas, não havia gritos —
-            apenas uma distância que crescia a cada dia, como se ambos temessem
-            o que poderia acontecer se o silêncio fosse quebrado. E foi com esse
-            peso que Katsuro entrou na escola. Os professores estranhavam sua
-            quietude, os colegas zombavam de sua falta de fala, mas nenhum deles
-            compreendia a verdade: Katsuro era um campo minado, e cada sílaba
-            podia ser a explosão final. Nas horas de estudo, permanecia imóvel,
-            os olhos baixos, a caneta riscando cadernos que raramente entregava.
-            Se alguém perguntava algo, respondia apenas com o mínimo: “sim”,
-            “não”, e nada mais. O tom de sua voz era baixo, quase um sopro, como
-            se falasse com medo de ser ouvido. Ele não queria ser especial. Não
-            queria carregar uma herança, uma técnica, uma maldição. Queria
-            apenas ser normal. Mas o destino não perguntara o que Katsuro queria
-            — apenas lhe dera uma voz que ninguém poderia suportar. E assim,
-            entre corredores cheios de risadas que não lhe pertenciam, Katsuro
-            Mikazuki caminhava como uma sombra. Preso entre o desejo de calar-se
-            para sempre e o medo do dia em que, por descuido, suas palavras
-            escapariam novamente. Pois se uma vez matou sem querer, quem poderia
-            garantir que não aconteceria de novo?
+            Na escola, era conhecido como o menino que não falava. Não por
+            timidez, nem desprezo pelos colegas, mas por medo — medo de si
+            mesmo. Seus lábios raramente se moviam, suas respostas eram acenos
+            curtos, gestos rápidos. Muitos o tomavam por estranho, outros por
+            arrogante. A verdade era que cada palavra lhe parecia uma lâmina,
+            afiada demais para ser usada.
           </p>
-          <h3></h3>
+          <p>
+            Katsuro não nascera monstro. O monstro foi moldado em uma noite
+            febril de sua infância. Lembrava-se pouco — o corpo ardendo, a mente
+            delirando, a garganta sussurrando frases sem sentido enquanto
+            sonhava. No quarto escuro, sua mãe tentava acalmá-lo. Mas entre
+            gemidos e palavras desconexas, uma ordem escapou. Não um pedido, não
+            um sonho, mas um comando carregado de algo sombrio. Quando
+            despertou, o silêncio era absoluto. O corpo dela jazia ao lado da
+            cama, os olhos ainda abertos, como se a morte tivesse vindo sem
+            aviso. Ele nunca soube exatamente quais palavras havia dito, apenas
+            que elas a arrancaram do mundo.
+          </p>
+          <p>
+            Desde então, viver com o pai tornou-se uma penitência. O homem o
+            olhava com tristeza contida, mas jamais ousava levantar a voz contra
+            ele. Não havia acusações explícitas, nem gritos — apenas uma
+            distância crescente, como se ambos temessem o que poderia acontecer
+            se o silêncio fosse quebrado.
+          </p>
+          <p>
+            Foi com esse peso que Katsuro entrou na escola. Professores
+            estranhavam sua quietude, colegas zombavam de sua falta de fala, mas
+            ninguém compreendia a verdade: Katsuro era um campo minado, e cada
+            sílaba podia ser a explosão final.
+          </p>
+          <p>
+            Nas horas de estudo, permanecia imóvel, olhos baixos, caneta
+            riscando cadernos que raramente entregava. Se alguém perguntava
+            algo, respondia apenas com o mínimo: “sim”, “não”, e nada mais. O
+            tom de sua voz era baixo, quase um sopro, como se falasse com medo
+            de ser ouvido.
+          </p>
+          <p>
+            Ele não queria ser especial. Não queria carregar uma herança, uma
+            técnica, uma maldição. Queria apenas ser normal. Mas o destino não
+            perguntou o que Katsuro queria — apenas lhe deu uma voz que ninguém
+            poderia suportar.
+          </p>
+          <p>
+            Assim, entre corredores cheios de risadas que não lhe pertenciam,
+            Katsuro Mikazuki caminhava como uma sombra. Preso entre o desejo de
+            calar-se para sempre e o medo do dia em que, por descuido, suas
+            palavras escapassem novamente. Pois se uma vez matou sem querer,
+            quem poderia garantir que não aconteceria de novo?
+          </p>
           <p>
             Katsuro Mikazuki não falava. Carregava sempre um pequeno
-            <a href="caderno.html" class="texto-mark"
+            <a
+              href="caderno.html"
+              class="texto-mark"
+              aria-label="Caderno preto de Katsuro"
               ><strong>caderno</strong></a
             >
             de capa preta, gasto nos cantos, com páginas manchadas pelo tempo e
             pela pressão de sua caligrafia firme. Era sua voz. Quando precisava
-            responder a algo, abria-o devagar, escrevia poucas palavras e
-            mostrava a quem perguntasse. Às vezes, eram frases curtas: “Estou
-            bem.” Outras vezes, apenas uma palavra isolada: “Sim.” ou “Não.” Na
-            escola, logo ficou conhecido como “o garoto do caderno”. Alguns
-            riam, outros estranhavam, mas ninguém ousava tomar aquilo dele.
-            Havia algo no modo como Katsuro o segurava — como quem segura um
-            amuleto contra demônios. Seus colegas tentavam decifrá-lo. Para
-            alguns, era uma excentricidade. Para outros, um gesto de arrogância.
-            Mas apenas Katsuro sabia o verdadeiro motivo: sua garganta não era
-            confiável. Sua voz não era sua. Era uma lâmina embebida em veneno,
-            pronta para cortar o mundo ao menor descuido. Durante as aulas, os
-            professores já haviam se acostumado. Faziam perguntas, e ele erguia
-            o caderno, mostrando a resposta. Alguns insistiam para que falasse,
-            mas bastava encontrar o olhar sombrio e cansado do garoto para
-            perceber que não adiantava. Era como se falar custasse mais do que
-            ele podia pagar. Às vezes, à noite, sozinho em seu quarto, Katsuro
-            relia as páginas antigas. Ali estavam memórias não ditas, respostas
-            nunca entregues, pensamentos sufocados que só o papel conhecia.
-            Entre anotações triviais de lições e lembretes, escondiam-se frases
-            que pareciam confissões: “Eu não queria ser assim.” “A voz me
-            odeia.” “Se eu dormir de novo… quem vai morrer depois?” Cada palavra
-            escrita era um grito que ele jamais ousaria soltar em voz alta. O
-            caderno era sua prisão e também sua salvação. Enquanto tivesse onde
-            escrever, não precisaria falar. Enquanto o papel o escutasse, o
-            mundo estaria a salvo dele.
+            responder, abria-o devagar, escrevia poucas palavras e mostrava a
+            quem perguntasse.
           </p>
-        </div>
-      </div>
-    </div>
+          <p>
+            Às vezes, frases curtas: “Estou bem.” Outras, apenas uma palavra
+            isolada: “Sim.” ou “Não.” Na escola, logo ficou conhecido como “o
+            garoto do caderno”. Alguns riam, outros estranhavam, mas ninguém
+            ousava tomar aquilo dele. Havia algo no modo como Katsuro o segurava
+            — como quem segura um amuleto contra demônios.
+          </p>
+          <p>
+            Seus colegas tentavam decifrá-lo. Para alguns, era excentricidade.
+            Para outros, arrogância. Mas apenas Katsuro sabia o verdadeiro
+            motivo: sua garganta não era confiável. Sua voz não era sua. Era uma
+            lâmina embebida em veneno, pronta para cortar o mundo ao menor
+            descuido.
+          </p>
+          <p>
+            Durante as aulas, os professores já haviam se acostumado. Faziam
+            perguntas, e ele erguia o caderno, mostrando a resposta. Alguns
+            insistiam para que falasse, mas bastava encontrar o olhar sombrio e
+            cansado do garoto para perceber que não adiantava. Era como se falar
+            custasse mais do que ele podia pagar.
+          </p>
+          <p>
+            Às vezes, à noite, sozinho em seu quarto, Katsuro relia as páginas
+            antigas. Ali estavam memórias não ditas, respostas nunca entregues,
+            pensamentos sufocados que só o papel conhecia. Entre anotações
+            triviais de lições e lembretes, escondiam-se frases que pareciam
+            confissões: “Eu não queria ser assim.” “A voz me odeia.” “Se eu
+            dormir de novo… quem vai morrer depois?”
+          </p>
+          <p>
+            Cada palavra escrita era um grito que jamais ousaria soltar em voz
+            alta. O caderno era sua prisão e também sua salvação. Enquanto
+            tivesse onde escrever, não precisaria falar. Enquanto o papel o
+            escutasse, o mundo estaria a salvo dele.
+          </p>
+        </section>
+      </article>
+    </main>
+    <div class="snow"></div>
+    <script src="js/snow.js"></script>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>
-
