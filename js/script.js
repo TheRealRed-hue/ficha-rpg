@@ -12,22 +12,24 @@ function createEmber() {
 setInterval(createEmber, 3000);
 
 // Adiciona runas ocasionais
-function createRune() {
-  const rune = document.createElement('div');
-  rune.className = 'rune';
+// Neve caindo
+function createSnowflake() {
+  const snowflake = document.createElement('div');
+  snowflake.className = 'snowflake';
+  snowflake.textContent = '❄'; // símbolo de neve (pode trocar por outros)
 
-  const runes = ["ᚠ","ᚢ","ᚦ","ᚨ","ᛃ","ᛇ","✧","✠"];
-  rune.textContent = runes[Math.floor(Math.random() * runes.length)];
+  // posição inicial
+  snowflake.style.left = Math.random() * 100 + 'vw';
+  snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+  snowflake.style.opacity = Math.random();
 
-  rune.style.top = Math.random() * 100 + '%';
-  rune.style.left = Math.random() * 100 + '%';
-  rune.style.animationDelay = Math.random() * 3 + 's';
+  document.body.appendChild(snowflake);
 
-  document.body.appendChild(rune);
-
-  setTimeout(() => { rune.remove(); }, 6000);
+  // remove depois de cair
+  setTimeout(() => { snowflake.remove(); }, 8000);
 }
-setInterval(createRune, 4000);
+setInterval(createSnowflake, 200); // frequência de neve
+
 
 // Efeito de hover nos blocos de estatística
 document.querySelectorAll('.stat-block').forEach(block => {
