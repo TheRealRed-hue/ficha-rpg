@@ -1,5 +1,7 @@
+/* === Importação de fontes === */
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Text:ital,wght@0,400;1,400&display=swap");
 
+/* === Reset e base === */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +9,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #0d0b14 0%, #1e1930 50%, #0d0b14 100%);
+  background: linear-gradient(135deg, #0a0f1c 0%, #1b2238 50%, #0a0f1c 100%);
   min-height: 100vh;
   font-family: "Crimson Text", serif;
   color: #e6e6f0;
@@ -15,13 +17,13 @@ body {
   position: relative;
 }
 
-/* Runas flutuantes */
+/* === Runas flutuantes === */
 .rune {
   position: absolute;
   font-family: "Cinzel", serif;
   font-size: 1.2rem;
-  color: rgba(180, 150, 250, 0.7);
-  text-shadow: 0 0 8px rgba(150, 120, 250, 0.8);
+  color: rgba(180, 220, 255, 0.75);
+  text-shadow: 0 0 8px rgba(150, 200, 255, 0.8);
   animation: floatRune 6s infinite linear;
   user-select: none;
 }
@@ -42,6 +44,7 @@ body {
   }
 }
 
+/* === Container principal === */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -50,17 +53,17 @@ body {
   z-index: 10;
 }
 
+/* === Ficha do personagem === */
 .character-sheet {
-  background: rgba(30, 25, 48, 0.9);
-  border: 2px solid #7b2cbf;
+  background: rgba(25, 35, 55, 0.85);
+  border: 2px solid #5a8dbf;
   border-radius: 15px;
   padding: 40px;
-  box-shadow: 0 0 30px rgba(180, 150, 250, 0.3),
-    inset 0 0 50px rgba(20, 15, 30, 0.5);
+  box-shadow: 0 0 30px rgba(150, 200, 255, 0.3),
+    inset 0 0 50px rgba(20, 30, 50, 0.6);
   position: relative;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(6px) brightness(1.05);
 }
-
 .character-sheet::before {
   content: "";
   position: absolute;
@@ -68,7 +71,7 @@ body {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #7b2cbf, #5a189a, #a78bfa, #5a189a);
+  background: linear-gradient(45deg, #5a8dbf, #1f4a7a, #7dd3fc, #1f4a7a);
   border-radius: 15px;
   z-index: -1;
   animation: borderGlow 4s ease-in-out infinite alternate;
@@ -78,102 +81,125 @@ body {
     opacity: 0.4;
   }
   100% {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 
+/* === Cabeçalho === */
 .header {
   text-align: center;
   margin-bottom: 40px;
 }
-
 .character-name {
   font-family: "Cinzel", serif;
   font-size: 2.5rem;
   font-weight: 600;
-  color: #bb86fc;
-  text-shadow: 2px 2px 6px rgba(123, 44, 191, 1);
+  color: #7dd3fc;
+  text-shadow: 2px 2px 8px rgba(120, 200, 255, 1);
   margin-bottom: 10px;
   letter-spacing: 2px;
 }
 .character-title {
   font-style: italic;
   font-size: 1.2rem;
-  color: #c4b5fd;
+  color: #bae6fd;
   margin-bottom: 20px;
   opacity: 0.9;
 }
 
-.section-title {
+/* === Títulos de seção === */
+.section-title,
+.section-title-fight {
   font-family: "Cinzel", serif;
   font-size: 1.5rem;
-  color: #dcd6f7;
   margin-bottom: 20px;
   text-align: center;
   position: relative;
 }
+.section-title {
+  color: #dbeafe;
+}
+.section-title-fight {
+  color: #7dd3fc;
+}
 .section-title::before,
-.section-title::after {
-  content: "✦";
+.section-title::after,
+.section-title-fight::before,
+.section-title-fight::after {
+  content: "❄";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #7b2cbf;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
-.section-title::before {
+.section-title::before,
+.section-title-fight::before {
   left: -30px;
+  color: #38bdf8;
 }
-.section-title::after {
+.section-title::after,
+.section-title-fight::after {
   right: -30px;
 }
+.section-title-fight::before,
+.section-title-fight::after {
+  color: #0ea5e9;
+}
 
+/* === Blocos de atributos === */
 .stat-block {
-  background: rgba(20, 15, 30, 0.6);
+  background: rgba(20, 30, 50, 0.55);
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid #7b2cbf;
+  border: 1px solid #3b82f6;
   transition: all 0.3s ease;
+  margin-bottom: 15px;
+  backdrop-filter: blur(4px);
 }
 .stat-block:hover {
-  border-color: #a78bfa;
-  box-shadow: 0 0 15px rgba(200, 180, 250, 0.3);
+  border-color: #7dd3fc;
+  box-shadow: 0 0 18px rgba(150, 200, 255, 0.4);
 }
 .stat-label {
   font-family: "Cinzel", serif;
   font-size: 0.9rem;
-  color: #c4b5fd;
+  color: #93c5fd;
   margin-bottom: 8px;
 }
 .stat-value {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #e6e6f0;
-  text-shadow: 1px 1px 2px rgba(50, 40, 80, 0.8);
+  color: #f0f9ff;
+  text-shadow: 1px 1px 2px rgba(20, 40, 80, 0.8);
 }
 
+/* === Seções gerais === */
 .section {
-  background: rgba(20, 15, 30, 0.4);
+  background: rgba(20, 30, 50, 0.4);
   padding: 20px;
   margin-bottom: 25px;
   border-radius: 10px;
-  border-left: 4px solid #7b2cbf;
+  border-left: 4px solid #3b82f6;
+  backdrop-filter: blur(3px);
 }
 
+/* === Lista de habilidades === */
 .skill {
-  background: rgba(20, 15, 30, 0.4);
+  background: rgba(20, 30, 50, 0.4);
   padding: 10px;
   border-radius: 6px;
-  border-left: 3px solid #7b2cbf;
+  border-left: 3px solid #38bdf8;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8px;
 }
 .skill.proficient {
-  border-left-color: #a78bfa;
+  border-left-color: #7dd3fc;
   font-weight: bold;
-  color: #ddd;
+  color: #e0f2fe;
 }
 
+/* === Imagem do personagem e setas === */
 .Imagemchar {
   position: relative;
   width: 60%;
@@ -182,22 +208,47 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .img-char {
   display: block;
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(180, 150, 250, 0.6),
-    0 0 40px rgba(150, 120, 250, 0.3);
+  box-shadow: 0 0 25px rgba(120, 200, 255, 0.7),
+    0 0 50px rgba(90, 180, 255, 0.4);
+  position: relative;
 }
-
+.img-char::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 15px;
+  background: radial-gradient(
+    circle,
+    rgba(120, 200, 255, 0.25) 0%,
+    transparent 80%
+  );
+  animation: glow 4s ease-in-out infinite alternate;
+  z-index: -1;
+}
+@keyframes glow {
+  0% {
+    opacity: 0.2;
+    box-shadow: 0 0 15px rgba(180, 220, 255, 0.3);
+  }
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 35px rgba(200, 240, 255, 0.9);
+  }
+}
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
-  color: rgba(180, 150, 250, 0.7);
-  text-shadow: 0 0 8px rgba(200, 200, 255, 0.6);
+  color: rgba(150, 200, 255, 0.8);
+  text-shadow: 0 0 8px rgba(200, 240, 255, 0.6);
   cursor: pointer;
   user-select: none;
   animation: floatArrow 2s ease-in-out infinite;
@@ -205,7 +256,7 @@ body {
   z-index: 2;
 }
 .arrow:hover {
-  color: #bb86fc;
+  color: #7dd3fc;
 }
 .arrow.left {
   left: -35px;
@@ -223,40 +274,14 @@ body {
   }
 }
 
-.img-char::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border-radius: 15px;
-  background: radial-gradient(
-    circle,
-    rgba(187, 134, 252, 0.2) 0%,
-    transparent 80%
-  );
-  animation: glow 4s ease-in-out infinite alternate;
-  z-index: -1;
-}
-@keyframes glow {
-  0% {
-    opacity: 0.2;
-    box-shadow: 0 0 10px rgba(200, 180, 250, 0.3);
-  }
-  100% {
-    opacity: 0.6;
-    box-shadow: 0 0 30px rgba(220, 200, 255, 0.8);
-  }
-}
-
+/* === Runas de fundo === */
 .bg-rune {
   position: fixed;
   font-family: "Cinzel", serif;
   font-size: 2rem;
-  color: rgba(200, 180, 250, 0.25);
-  text-shadow: 0 0 15px rgba(200, 180, 255, 0.9),
-    0 0 25px rgba(180, 150, 250, 0.7);
+  color: rgba(200, 230, 255, 0.25);
+  text-shadow: 0 0 15px rgba(200, 240, 255, 0.9),
+    0 0 25px rgba(150, 200, 255, 0.7);
   pointer-events: none;
   animation: glowRune 6s ease-in-out forwards;
   z-index: 1;
@@ -272,8 +297,8 @@ body {
   50% {
     opacity: 1;
     transform: scale(1.2) rotate(180deg);
-    text-shadow: 0 0 25px rgba(255, 255, 255, 1),
-      0 0 45px rgba(200, 200, 255, 0.9);
+    text-shadow: 0 0 25px rgba(230, 250, 255, 1),
+      0 0 45px rgba(180, 220, 255, 0.9);
   }
   80% {
     opacity: 0.6;
@@ -284,13 +309,14 @@ body {
   }
 }
 
+/* === Palavras flutuantes === */
 .word {
   position: fixed;
   font-family: "Cinzel", serif;
   font-size: 1.4rem;
-  color: rgba(220, 220, 255, 0.7);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
-    0 0 25px rgba(180, 180, 255, 0.8);
+  color: rgba(210, 240, 255, 0.8);
+  text-shadow: 0 0 12px rgba(240, 250, 255, 1),
+    0 0 25px rgba(180, 220, 255, 0.8);
   pointer-events: none;
   animation: floatWord 8s ease-in-out forwards;
   z-index: 2;
@@ -316,243 +342,124 @@ body {
   }
 }
 
+/* === Estilos de texto especiais === */
 .fala-amaldiçoada {
-  font-style: "cinzel", serif;
-  color: #c4b5fd;
-  text-shadow: 0 0 5px #a78bfa;
+  font-family: "Cinzel", serif;
+  color: #7dd3fc;
+  text-shadow: 0 0 6px #38bdf8;
   text-align: start;
   margin-bottom: 10px;
   font-size: 23px;
 }
-
 .texto-fala-amaldiçoada {
-  font-style: "cinzel", serif;
-  color: #fffdfd;
-  text-shadow: 0 0 5px #3a2d50;
+  font-family: "Cinzel", serif;
+  color: #f0f9ff;
+  text-shadow: 0 0 6px #1e3a8a;
   margin-top: 5px;
   font-size: 20px;
 }
-
 .texto-mark {
-  color: #bb86fc;
+  color: #7dd3fc;
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: bold;
   font-size: 16px;
+  transition: all 0.3s ease;
 }
-
 .texto-mark:hover {
-  background: rgba(187, 134, 252, 0.1);
-  box-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
+  background: rgba(120, 200, 255, 0.15);
+  box-shadow: 0 0 10px rgba(120, 200, 255, 0.6);
   cursor: pointer;
   text-decoration: underline;
-  transition: all 0.3s ease;
-  text-shadow: 0 0 8px #bb86fc, 0 0 15px #a78bfa;
+  text-shadow: 0 0 10px #7dd3fc, 0 0 20px #38bdf8;
 }
 
-.section-title-fight {
-  font-family: "Cinzel", serif;
-  font-size: 1.5rem;
-  color: #bb86fc;
-  margin-bottom: 20px;
-  text-align: center;
-  position: relative;
-}
-.section-title-fight::before,
-.section-title-fight::after {
-  content: "✦";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #5a189a;
-  font-size: 0.8rem;
-}
-
-.strong-bold {
-  font-weight: bold;
-  color: #c4b5fd;
-}
-.gold {
-  color: gold;
-  font-weight: bold;
-  text-shadow: 0 0 8px gold, 0 0 15px goldenrod;
-}
-
-/* === TEMA BLOOD === */
-b/* === TEMA INUMAKI (substituindo cores do blood-theme) === */
-body.blood-theme {
-  background: linear-gradient(135deg, #0d0b14 0%, #1e1930 50%, #0d0b14 100%);
-  color: #dcdcdc;
-}
-
-body.blood-theme .character-sheet {
-  background: rgba(30, 25, 48, 0.9);
-  border: 2px solid #5a189a;
-  box-shadow: 0 0 40px rgba(167, 139, 250, 0.4),
-    inset 0 0 60px rgba(20, 15, 30, 0.8);
-}
-
-body.blood-theme .character-name {
-  color: #bb86fc;
-  text-shadow: 0 0 15px #7b2cbf, 0 0 30px #a78bfa;
-}
-
-body.blood-theme .section-title {
-  color: #c4b5fd;
-  text-shadow: 0 0 8px #a78bfa;
-}
-
-body.blood-theme .stat-block {
-  background: rgba(20, 15, 30, 0.6);
-  border: 1px solid #7b2cbf;
-}
-
-body.blood-theme .skill {
-  border-left: 3px solid #5a189a;
-  color: #ddd;
-}
-
-body.blood-theme .img-char {
-  box-shadow: 0 0 25px rgba(167, 139, 250, 0.7), 0 0 50px rgba(90, 24, 154, 0.5);
-}
-
-body.blood-theme h3 {
-  color: #bb86fc;
-  text-shadow: 0 0 10px #7b2cbf, 0 0 20px #a78bfa;
-}
-
-body.blood-theme .fala-amaldiçoada {
-  color: #c4b5fd;
-  text-shadow: 0 0 5px #a78bfa;
-}
-
-body.blood-theme .texto-fala-amaldiçoada {
-  color: #e6e6f0;
-  text-shadow: 0 0 5px #3a2d50;
-}
-
-body.blood-theme .texto-mark {
-  color: #bb86fc;
-  background: none;
-}
-
-body.blood-theme .texto-mark:hover {
-  background: rgba(187, 134, 252, 0.1);
-  box-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
-  text-shadow: 0 0 8px #bb86fc, 0 0 15px #a78bfa;
-}
-
-body.blood-theme .section-title-fight {
-  color: #bb86fc;
-  text-shadow: 0 0 10px #7b2cbf, 0 0 20px #a78bfa;
-}
-
-body.blood-theme .strong-bold {
-  color: #c4b5fd;
-}
-
-body.blood-theme a {
-  color: #c4b5fd;
-}
-
-body.blood-theme a:hover {
-  color: #bb86fc;
-}
-
-.inventory-list {
-  list-style: none; /* remove bolinhas padrão */
-  padding: 0;
-  margin: 0;
-}
-
-.inventory-list li {
-  display: flex; /* ícone + texto ficam alinhados */
-  align-items: center; /* centraliza verticalmente */
-  margin-bottom: 8px; /* espaço entre os itens */
-}
-
-.item-icon {
-  width: 60px;
-  height: 60px;
-  margin-right: 8px; /* espaço entre ícone e texto */
-  object-fit: contain; /* evita distorção */
-}
-
-a {
-  color: #bb86fc;
-  text-decoration: none;
-  transition: color 0.3s;
-  font-size: 35px;
-}
-
+/* === Títulos h3 === */
 h3 {
   text-align: center;
   margin-bottom: 15px;
   font-family: "Cinzel", serif;
   font-size: 1.3rem;
-  color: #c4b5fd;
-  text-shadow: 0 0 10px #a78bfa, 0 0 20px #7b2cbf;
+  color: #93c5fd;
+  text-shadow: 0 0 12px #38bdf8, 0 0 25px #1e3a8a;
 }
 
-.fala-amaldiçoada {
-  font-style: "cinzel", serif;
-  color: #c4b5fd;
-  text-shadow: 0 0 5px #a78bfa;
-  text-align: start;
-  margin-bottom: 10px;
-  font-size: 23px;
-}
-
-.texto-fala-amaldiçoada {
-  font-style: "cinzel", serif;
-  color: #fffdfd;
-  text-shadow: 0 0 5px #3a2d50;
-  margin-top: 5px;
-  font-size: 20px;
-}
-
-.texto-mark {
-  color: #bb86fc;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.texto-mark:hover {
-  background: rgba(187, 134, 252, 0.1);
-  box-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
-  cursor: pointer;
-  text-decoration: underline;
-  transition: all 0.3s ease;
-  text-shadow: 0 0 8px #bb86fc, 0 0 15px #a78bfa;
-}
-
-.section-title-fight {
-  font-family: "Cinzel", serif;
-  font-size: 1.5rem;
-  color: #bb86fc;
-  margin-bottom: 20px;
-  text-align: center;
-  position: relative;
-}
-.section-title-fight::before,
-.section-title-fight::after {
-  content: "✦";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #5a189a;
-  font-size: 0.8rem;
-}
-
+/* === Classes utilitárias === */
 .strong-bold {
   font-weight: bold;
-  color: #c4b5fd;
+  color: #7dd3fc;
+}
+.gold {
+  color: #e0f2fe;
+  font-weight: bold;
+  text-shadow: 0 0 10px #93c5fd, 0 0 20px #38bdf8;
 }
 
-.gold {
-  color: #f5f1ff;
-  font-weight: bold;
-  text-shadow: 0 0 8px #d0c4ff, 0 0 15px #b5aaff;
+/* === Links === */
+a {
+  color: #7dd3fc;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 35px;
+}
+a:hover {
+  color: #bae6fd;
+}
+
+/* === Inventário === */
+.inventory-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.inventory-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.item-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
+/* === Neve === */
+.snowflake {
+  position: fixed;
+  top: -5vh;
+  color: #ffffff;
+  pointer-events: none;
+  animation: fallSnow 8s linear forwards;
+  z-index: 2;
+  font-size: 1rem;
+  opacity: 0.8;
+  text-shadow: 0 0 8px rgba(240, 250, 255, 0.9),
+    0 0 12px rgba(200, 230, 255, 0.6);
+}
+
+@keyframes fallSnow {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) scale(1.2);
+    opacity: 0.2;
+  }
+}
+
+.abrir-inv {
+  font-size: 20px;
+  color: #7dd3fc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.inventory-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
 }
